@@ -1,0 +1,44 @@
+@import url(https://fonts.googleapis.com/css?family=Advent+Pro:300);
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: white;
+    font-family: "Advent Pro", sans-serif;
+    letter-spacing: 0.1em;
+}
+
+.header {
+    margin: 40px auto;
+}
+
+.card-header {
+    margin: 40px auto;
+}
+
+.App {
+    width: 60%;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.card {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+}
+
+.select-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 180px;
+}
