@@ -2,7 +2,8 @@ import React from "react";
 import { Bar } from "react-chartjs-2";
 
 const WeekInfo = ({ data }) => {
-  const dayCount = { // set sample values to zero in production
+  const dayCount = {
+    // set sample values to zero in production
     Monday: 5,
     Tuesday: 5,
     Wednesday: 5,
@@ -12,7 +13,7 @@ const WeekInfo = ({ data }) => {
 
   data.forEach((date) => {
     let day = new Date(date["Date"].split("/").reverse()).getDay();
-    console.log(day);
+    //console.log(day);
     dayCount[Object.keys(dayCount)[day - 1]]++;
   });
 

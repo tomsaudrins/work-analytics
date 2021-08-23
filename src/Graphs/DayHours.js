@@ -1,6 +1,11 @@
 import React from "react";
 import { PolarArea } from "react-chartjs-2";
 
+const calculateHours = (day) => {
+  let [hours, minutes] = day["Hours"].split(":");
+  return +hours + +minutes / 60;
+};
+
 const DayHours = ({ data }) => {
   const hourData = {
     // set sample values to zero in production
@@ -10,6 +15,12 @@ const DayHours = ({ data }) => {
     Thursday: 5,
     Friday: 8,
   };
+
+  data.forEach((date) => {
+    let day = new Date(date["Date"].split("/").reverse()).getDay();
+    //console.log(day);
+    hourData[Object.keys(hourData)[day - 1]] += calculateHours(date);
+  });
 
   const dataSet = {
     labels: Object.keys(hourData),
@@ -54,7 +65,7 @@ const DayHours = ({ data }) => {
       },
       title: {
         display: true,
-        text: "Average hours per day",
+        text: "Weekly hour distribution",
       },
     },
   };
