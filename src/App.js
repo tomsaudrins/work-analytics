@@ -1,10 +1,17 @@
 import OptionCard from "./OptionCard";
-
+import Location from "./Graphs/Location";
+import d3 from "d3";
+import { useState } from "react";
+import WeekInfo from "./Graphs/WeekInfo";
+import DayHours from "./Graphs/DayHours";
 const App = () => {
+  const [data, setData] = useState(null);
+
   const selectFile = () => {
-    let input = document.createElement("input");
-    input.type = "file";
-    input.click();
+    d3.csv("data.csv", (csvData) => {
+      console.log(csvData);
+      setData(csvData);
+    });
   };
 
   const proceed = () => {
@@ -19,11 +26,15 @@ const App = () => {
         button_text="Select file..."
         onClick={selectFile}
       />
-      <OptionCard
+      {/* <OptionCard
         title="Use our data sample"
         button_text="Next"
         onClick={proceed}
-      />
+      /> */}
+
+      <div>{data ? <Location data={data} /> : "No data loaded"}</div>
+      <div>{data ? <WeekInfo data={data} /> : "No data loaded"}</div>
+      <div>{data ? <DayHours data={data} /> : "No data loaded"}</div>
     </div>
   );
 };
