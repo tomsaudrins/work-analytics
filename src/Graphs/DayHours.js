@@ -15,7 +15,6 @@ const DayHours = ({ data }) => {
     labels: Object.keys(hourData),
     datasets: [
       {
-        label: "# of Votes",
         data: Object.values(hourData),
         backgroundColor: [
           "rgba(255, 99, 132, 0.5)",
@@ -28,9 +27,41 @@ const DayHours = ({ data }) => {
       },
     ],
   };
+
+  const options = {
+    indexAxis: "y",
+    backgroundColor: "red",
+    yAxis: {
+      scaleLabel: {
+        display: true,
+        labelString: "Hours",
+      },
+    },
+    scales: {
+      ticks: {
+        display: "auto",
+      },
+    },
+    elements: {
+      bar: {
+        borderWidth: 1,
+      },
+    },
+    responsive: true,
+    plugins: {
+      legend: {
+        position: "right",
+      },
+      title: {
+        display: true,
+        text: "Average hours per day",
+      },
+    },
+  };
+
   return (
     <div className="dayHoursInfo">
-      <PolarArea data={dataSet} />
+      <PolarArea data={dataSet} options={options} />
     </div>
   );
 };

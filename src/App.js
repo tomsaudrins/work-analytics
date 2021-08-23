@@ -14,9 +14,9 @@ const App = () => {
     });
   };
 
-  const proceed = () => {
-    console.log("Proceed");
-  };
+  // const proceed = () => {
+  //   console.log("Proceed");
+  // };
 
   return (
     <div className="App">

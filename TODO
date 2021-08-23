@@ -1,14 +1,17 @@
 Stats:
 
-Weekly summary, bar char of how many times this year I have worked in the specified day
-Option to convert that to a pie chart
+DONE Weekly summary, bar char of how many times this year I have worked in the specified day
+DONE Work from office / Work from home ratio.
+Average hours per day.
+
 
 Most money earned - sort by day, week, month
-Average hours per day.
+
 
 Total amount of money earned
 Total taxes payed
 Total holiday payed
 
-Work from office / Work from home ratio.
+
 km driven per day average.
+

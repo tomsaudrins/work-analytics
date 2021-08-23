@@ -9,7 +9,7 @@
 }
 
 body {
-    background: #18efeb;
+    /*background: #18efeb; */
     height: 100vh;
 }
 
@@ -25,7 +25,7 @@ body {
     width: 60%;
     margin: 80px auto;
     text-align: center;
-    background: #0b100a0d;
+    /*background: #0b100a0d; */
 }
 
 .card {
