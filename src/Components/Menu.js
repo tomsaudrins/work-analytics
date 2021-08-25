@@ -1,4 +1,4 @@
-const Menu = () => {
+const Menu = ({ onClick }) => {
   return (
     <div className="sidebar">
       <a className="active" href="#home">
@@ -8,7 +8,9 @@ const Menu = () => {
       <a href="#news">Hours</a>
       <a href="#contact">Salary</a>
       <a href="#contact">Days</a>
-      <a href="#about">Logout</a>
+      <a href="#about" onClick={() => onClick(null)}>
+        Logout
+      </a>
     </div>
   );
 };

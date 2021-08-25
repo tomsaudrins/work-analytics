@@ -6,6 +6,7 @@ import WeekInfo from "../Graphs/WeekInfo";
 import DayHours from "../Graphs/DayHours";
 import Menu from "./Menu";
 import InfoCards from "./InfoCards";
+
 const App = () => {
   const [data, setData] = useState(null);
 
@@ -15,13 +16,10 @@ const App = () => {
       console.log(data);
     });
   };
-  // const proceed = () => {
-  //   console.log("Proceed");
-  // };
 
   return (
     <div className="App">
-      <Menu />
+      <Menu onClick={setData} />
       <div className="content">
         <div style={{ display: "block", width: "100%", margin: "0 auto" }}>
           {data ? (
