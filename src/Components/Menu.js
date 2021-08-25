@@ -2,7 +2,7 @@ const Menu = ({ onClick }) => {
   return (
     <div className="sidebar">
       <a className="active" href="#home">
-        Data visualizer
+        Data Analysis
       </a>
       <a href="#main">Location</a>
       <a href="#news">Hours</a>

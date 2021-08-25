@@ -1,10 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Advent+Pro:300);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,700);
 * {
     margin: 0;
     padding: 0;
     border: 0;
     color: #00000094;
-    font-family: "Advent Pro", sans-serif;
+    font-family: "Roboto", sans-serif;
     letter-spacing: 0.1em;
 }
 
@@ -26,6 +26,7 @@ canvas {
 }
 
 .card-header {
+    font-weight: normal;
     margin: 40px auto;
 }
 
@@ -42,16 +43,12 @@ canvas {
 }
 
 .card-component {
-    border: 1px solid #b7b7b7;
     width: 20%;
     display: inline-block;
     box-sizing: border-box;
-    border-radius: 10px;
-    height: 100px;
-    margin: 25px 0px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height: auto;
     transition: 0.3s;
-    padding: 15px 10px;
+    padding: 0px 10px;
 }
 
 .select-button {
@@ -81,12 +78,14 @@ canvas {
 }
 
 .cardContainer {
+    height: 69px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     /* height: 100vh; */
-    padding-bottom: 60px;
+    background-color: #c3c3c361;
+    margin-bottom: 60px;
 }
 
 .graphs {
@@ -95,12 +94,6 @@ canvas {
 
 
 /* when screen size is below 800 px diving set card component width to 100% */
-
-@media screen and (max-width: 1206px) {
-    .card-component {
-        width: 35%;
-    }
-}
 
 
 /*Sidebar */
@@ -119,7 +112,7 @@ canvas {
     display: block;
     color: black;
     padding: 25px;
-    font-size: 20px;
+    font-size: 16px;
     text-decoration: none;
 }
 
