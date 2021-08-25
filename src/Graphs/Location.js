@@ -1,13 +1,8 @@
 import { Doughnut } from "react-chartjs-2";
+import countLocation from "../Scripts/countLocation";
 
 const Location = ({ data }) => {
-  const locationData = {
-    Office: 0,
-    Home: 0,
-  };
-
-  data.forEach((location) => locationData[location["Location"]]++);
-
+  const locationData = countLocation(data);
   const dataSet = {
     labels: Object.keys(locationData),
     datasets: [
