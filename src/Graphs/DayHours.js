@@ -42,24 +42,6 @@ const DayHours = ({ data }) => {
   const options = {
     maintainAspectRatio: false,
     indexAxis: "y",
-    backgroundColor: "red",
-    yAxis: {
-      gridLines: { tickLength: 0 },
-      scaleLabel: {
-        display: true,
-        labelString: "Hours",
-      },
-    },
-    scales: {
-      ticks: {
-        display: "auto",
-      },
-    },
-    elements: {
-      bar: {
-        borderWidth: 1,
-      },
-    },
     responsive: true,
     plugins: {
       legend: {
