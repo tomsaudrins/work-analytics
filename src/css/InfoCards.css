@@ -6,4 +6,6 @@
     align-items: center;
     background-color: #27293d;
     margin-bottom: 1%;
+    width: calc(100% - 2%);
+    margin-left: 1%;
 }
