@@ -44,6 +44,7 @@ const DayHours = ({ data }) => {
     indexAxis: "y",
     backgroundColor: "red",
     yAxis: {
+      gridLines: { tickLength: 0 },
       scaleLabel: {
         display: true,
         labelString: "Hours",
@@ -62,7 +63,7 @@ const DayHours = ({ data }) => {
     responsive: true,
     plugins: {
       legend: {
-        position: "right",
+        position: "bottom",
         labels: {
           font: {
             family: "Poppins",
