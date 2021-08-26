@@ -1,6 +1,6 @@
-import getDay from "../Scripts/getDay";
-import countHours from "../Scripts/countHours";
-
+import getDay from "../scripts/getDay";
+import countHours from "../scripts/countHours";
+import "../css/Day.css";
 const Day = ({ Icon, day }) => {
   return (
     <div className="day" key={day["Date"]}>

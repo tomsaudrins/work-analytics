@@ -1,0 +1,9 @@
+.info-cards {
+    height: 69px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #c3c3c361;
+    margin-bottom: 60px;
+}

@@ -1,3 +1,5 @@
+import "../css/Menu.css";
+
 const Menu = ({ onClick }) => {
   return (
     <div className="sidebar">

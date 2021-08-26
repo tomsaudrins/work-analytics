@@ -1,5 +1,5 @@
 import { Doughnut } from "react-chartjs-2";
-import countLocation from "../Scripts/countLocation";
+import countLocation from "../scripts/countLocation";
 
 const Location = ({ data }) => {
   const locationData = countLocation(data);

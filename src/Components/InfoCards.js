@@ -1,10 +1,10 @@
-import countLocation from "../Scripts/countLocation";
+import countLocation from "../scripts/countLocation";
 import Card from "./Card";
-import countHours from "../Scripts/countTotalHours";
-
+import countHours from "../scripts/countTotalHours";
+import "../css/InfoCards.css";
 const InfoCards = ({ data }) => {
   return (
-    <div className="cardContainer">
+    <div className="info-cards">
       <Card name="Total Hours" body={countHours(data)} />
       <Card
         name="Salary"

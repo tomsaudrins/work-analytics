@@ -1,3 +1,5 @@
+import "../css/OptionCard.css";
+
 const OptionCard = ({ title, button_text, onClick }) => {
   return (
     <div className="card">

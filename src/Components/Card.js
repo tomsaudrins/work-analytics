@@ -1,3 +1,4 @@
+import "../css/Card.css";
 const Card = ({ name, body }) => {
   return (
     <div className="card-component">

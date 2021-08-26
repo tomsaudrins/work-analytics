@@ -1,0 +1,8 @@
+.card-component {
+    width: 20%;
+    display: inline-block;
+    box-sizing: border-box;
+    height: auto;
+    transition: 0.3s;
+    padding: 0px 10px;
+}

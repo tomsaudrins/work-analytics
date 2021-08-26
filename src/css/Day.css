@@ -1,0 +1,14 @@
+.day {
+    margin: 12px auto;
+    text-align: left;
+    border-radius: 9px;
+    padding: 10px 20px;
+}
+
+.day:nth-child(odd) {
+    background-color: #f3f3f3;
+}
+
+.day:nth-child(even) {
+    background-color: #f9f9f9;
+}

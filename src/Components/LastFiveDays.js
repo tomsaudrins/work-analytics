@@ -1,6 +1,6 @@
 import { FaHome, FaBuilding } from "react-icons/fa";
 import Day from "./Day";
-
+import "../css/LastFiveDays.css";
 const LastFiveDays = ({ data }) => {
   let lastFiveDays = data.reverse().slice(0, 5);
   return (

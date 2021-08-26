@@ -1,9 +1,9 @@
 import OptionCard from "./OptionCard";
-import Location from "../Graphs/Location";
+import Location from "../graphs/Location";
 import d3 from "d3";
 import { useState } from "react";
-import WeekInfo from "../Graphs/WeekInfo";
-import DayHours from "../Graphs/DayHours";
+import WeekInfo from "../graphs/WeekInfo";
+import DayHours from "../graphs/DayHours";
 import Menu from "./Menu";
 import InfoCards from "./InfoCards";
 import LastFiveDays from "./LastFiveDays";
