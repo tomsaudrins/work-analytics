@@ -1,0 +1,67 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,200,700);
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: #6a696994;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+}
+
+body {
+    background: #1e1e2f;
+    height: 100vh;
+}
+
+canvas {
+    float: left;
+    padding: 24px;
+    background-color: #27293d;
+    border-radius: 0.2857rem;
+}
+
+.header {
+    margin: 40px auto;
+}
+
+.App {
+    margin: 0px auto;
+    text-align: center;
+}
+
+.locationInfo {
+    height: 320px;
+    float: left;
+}
+
+.weekInfo {
+    height: 320px;
+    float: left;
+}
+
+.dayHoursInfo {
+    height: 320px;
+    float: left;
+    margin: 0px auto 1% auto;
+}
+
+
+/* when screen size is below 800 px diving set card component width to 100% */
+
+
+/*Sidebar */
+
+div.content {
+    width: calc(100%-200px);
+    margin-left: 200px;
+    height: 1000px;
+}
+
+
+/*Sidebar */
+
+.row {
+    display: flex;
+    margin-left: 51px;
+    width: calc(90% + 42px);
+}
