@@ -17,8 +17,7 @@ body {
 /*four divs aligned on one line*/
 
 canvas {
-    border-radius: 15px;
-    box-shadow: 0 0 1px #00000094;
+    float: left;
 }
 
 .header {
@@ -157,3 +156,23 @@ div.content {
 
 
 /*Sidebar */
+
+.day {
+    margin: 12px auto;
+    text-align: left;
+    border-radius: 9px;
+    padding: 10px 20px;
+}
+
+.lastFiveDays {
+    padding: 0px 20px;
+    width: 400px;
+}
+
+.day:nth-child(odd) {
+    background-color: #f3f3f3;
+}
+
+.day:nth-child(even) {
+    background-color: #f9f9f9;
+}

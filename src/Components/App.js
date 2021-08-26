@@ -6,6 +6,7 @@ import WeekInfo from "../Graphs/WeekInfo";
 import DayHours from "../Graphs/DayHours";
 import Menu from "./Menu";
 import InfoCards from "./InfoCards";
+import LastFiveDays from "./LastFiveDays";
 
 const App = () => {
   const [data, setData] = useState(null);
@@ -34,9 +35,12 @@ const App = () => {
         </div>
         <div className="graphs">
           {data ? <InfoCards data={data} /> : ""}
-          <div>{data ? <Location data={data} /> : ""}</div>
-          <div>{data ? <WeekInfo data={data} /> : ""}</div>
-          <div>{data ? <DayHours data={data} /> : ""}</div>
+
+          {data ? <WeekInfo data={data} /> : ""}
+          {data ? <LastFiveDays data={data} /> : ""}
+
+          {data ? <Location data={data} /> : ""}
+          {data ? <DayHours data={data} /> : ""}
         </div>
       </div>
     </div>

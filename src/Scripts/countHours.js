@@ -1,9 +1,7 @@
-const countHours = (data) => {
+const countHours = (day) => {
   let total = 0;
-  data.forEach((day) => {
-    let [hours, minutes] = day["Hours"].split(":");
-    total += +hours + +minutes / 60;
-  });
+  let [hours, minutes] = day["Hours"].split(":");
+  total += +hours + +minutes / 60;
   return total;
 };
 

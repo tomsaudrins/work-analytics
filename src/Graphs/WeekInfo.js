@@ -22,7 +22,7 @@ const WeekInfo = ({ data }) => {
     datasets: [
       {
         data: Object.values(dayCount),
-        label: "Location informaton",
+        label: "Days worked",
         backgroundColor: [
           "rgba(255, 99, 132, 0.2)",
           "rgba(54, 162, 235, 0.2)",
@@ -54,7 +54,7 @@ const WeekInfo = ({ data }) => {
       },
       title: {
         display: true,
-        text: "Weekly overview",
+        text: "Work day distribution",
       },
     },
   };
