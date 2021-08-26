@@ -62,6 +62,6 @@ div.content {
 
 .row {
     display: flex;
-    margin-left: 51px;
-    width: calc(90% + 42px);
+    margin-left: 1%;
+    width: 98%;
 }
