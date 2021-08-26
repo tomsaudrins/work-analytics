@@ -1,6 +1,6 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
-
+import "../css/grid.css";
 const WeekInfo = ({ data }) => {
   const dayCount = {
     // set sample values to zero in production
@@ -41,6 +41,7 @@ const WeekInfo = ({ data }) => {
     ],
   };
   const options = {
+    maintainAspectRatio: false,
     indexAxis: "y",
     backgroundColor: "red",
     yAxis: {
@@ -65,19 +66,20 @@ const WeekInfo = ({ data }) => {
         position: "bottom",
         labels: {
           font: {
-            family: "Roboto",
+            family: "Poppins",
           },
         },
       },
       title: {
-        display: true,
+        display: false,
         text: "Weekly day distribution",
-        fontFamily: "Roboto",
+        fontFamily: "Poppins",
+        fontStyle: "italic",
       },
     },
   };
   return (
-    <div className="weekInfo">
+    <div className="weekInfo info-grid-two">
       <Bar data={dataSet} options={options} />
     </div>
   );

@@ -1,6 +1,6 @@
 import { Doughnut } from "react-chartjs-2";
 import countLocation from "../scripts/countLocation";
-
+import "../css/grid.css";
 const Location = ({ data }) => {
   const locationData = countLocation(data);
   const dataSet = {
@@ -31,6 +31,7 @@ const Location = ({ data }) => {
   };
 
   const options = {
+    maintainAspectRatio: false,
     indexAxis: "y",
     backgroundColor: "red",
     yAxis: {
@@ -55,19 +56,20 @@ const Location = ({ data }) => {
         position: "bottom",
         labels: {
           font: {
-            family: "Roboto",
+            family: "Poppins",
+            weight: "100",
           },
         },
       },
       title: {
-        display: true,
+        display: false,
         text: "Weekly hour distribution",
       },
     },
   };
 
   return (
-    <div className="locationInfo">
+    <div className="locationInfo info-grid-one">
       <Doughnut data={dataSet} options={options} />
     </div>
   );

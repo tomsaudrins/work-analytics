@@ -1,5 +1,6 @@
 import React from "react";
 import { PolarArea } from "react-chartjs-2";
+import "../css/grid.css";
 
 const calculateHours = (day) => {
   let [hours, minutes] = day["Hours"].split(":");
@@ -18,7 +19,6 @@ const DayHours = ({ data }) => {
 
   data.forEach((date) => {
     let day = new Date(date["Date"].split("/").reverse()).getDay();
-    //console.log(day);
     hourData[Object.keys(hourData)[day - 1]] += calculateHours(date);
   });
 
@@ -40,6 +40,7 @@ const DayHours = ({ data }) => {
   };
 
   const options = {
+    maintainAspectRatio: false,
     indexAxis: "y",
     backgroundColor: "red",
     yAxis: {
@@ -61,22 +62,24 @@ const DayHours = ({ data }) => {
     responsive: true,
     plugins: {
       legend: {
-        position: "bottom",
+        position: "right",
         labels: {
           font: {
-            family: "Roboto",
+            family: "Poppins",
+            weight: "100",
+            color: "white",
           },
         },
       },
       title: {
-        display: true,
+        display: false,
         text: "Weekly hour distribution",
       },
     },
   };
 
   return (
-    <div className="dayHoursInfo">
+    <div className="dayHoursInfo info-grid-two">
       <PolarArea data={dataSet} options={options} />
     </div>
   );

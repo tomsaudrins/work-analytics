@@ -5,4 +5,10 @@
     height: auto;
     transition: 0.3s;
     padding: 0px 10px;
+    color: white;
+}
+
+.card-component h3,
+h4 {
+    color: white;
 }

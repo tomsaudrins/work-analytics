@@ -4,15 +4,15 @@ import "../css/Day.css";
 const Day = ({ Icon, day }) => {
   return (
     <div className="day" key={day["Date"]}>
-      <h3 style={{ fontWeight: "normal" }}>
+      <h3 style={{ fontWeight: 100 }}>
         <Icon />
         <span style={{ marginLeft: "5px" }}>{getDay(day)}</span>
         <span
           style={{
             marginLeft: "5px",
             float: "right",
-            fontSize: "23px",
-            color: "#00000061",
+            fontSize: "20px",
+            marginTop: "10px",
           }}
         >
           {countHours(day)} hr

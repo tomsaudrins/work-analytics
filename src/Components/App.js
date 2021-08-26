@@ -10,7 +10,10 @@ import LastFiveDays from "./LastFiveDays";
 import { defaults } from "react-chartjs-2";
 
 const App = () => {
-  defaults.font.family = "Roboto";
+  defaults.font.family = "Poppins";
+  defaults.font.size = 16;
+  defaults.style = "100";
+  defaults.color = "#fff";
 
   const [data, setData] = useState(null);
 
@@ -39,11 +42,12 @@ const App = () => {
         <div className="graphs">
           {data ? <InfoCards data={data} /> : ""}
 
-          {data ? <WeekInfo data={data} /> : ""}
-          {data ? <LastFiveDays data={data} /> : ""}
-
-          {data ? <Location data={data} /> : ""}
-          {data ? <DayHours data={data} /> : ""}
+          <div className="row">
+            {data ? <Location data={data} /> : ""}
+            {data ? <DayHours data={data} /> : ""}
+            {data ? <WeekInfo data={data} /> : ""}
+          </div>
+          <div className="row">{data ? <LastFiveDays data={data} /> : ""}</div>
         </div>
       </div>
     </div>

@@ -1,4 +1,6 @@
 .lastFiveDays {
-    padding: 0px 20px;
-    width: 400px;
+    padding: 10px 48px;
+    border-radius: 8px;
+    background-color: #27293d;
+    width: 100%;
 }

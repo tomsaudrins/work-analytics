@@ -5,7 +5,7 @@ const LastFiveDays = ({ data }) => {
   let lastFiveDays = data.reverse().slice(0, 5);
   return (
     <div className="lastFiveDays">
-      <h3>Last five days</h3>
+      <h3>Last Five Work Days</h3>
       {lastFiveDays.map((day) => {
         return (
           <Day
