@@ -61,7 +61,12 @@ const DayHours = ({ data }) => {
     responsive: true,
     plugins: {
       legend: {
-        position: "right",
+        position: "bottom",
+        labels: {
+          font: {
+            family: "Roboto",
+          },
+        },
       },
       title: {
         display: true,

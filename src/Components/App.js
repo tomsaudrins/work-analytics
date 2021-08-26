@@ -7,8 +7,11 @@ import DayHours from "../Graphs/DayHours";
 import Menu from "./Menu";
 import InfoCards from "./InfoCards";
 import LastFiveDays from "./LastFiveDays";
+import { defaults } from "react-chartjs-2";
 
 const App = () => {
+  defaults.font.family = "Roboto";
+
   const [data, setData] = useState(null);
 
   const selectFile = () => {

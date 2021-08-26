@@ -42,6 +42,18 @@ const WeekInfo = ({ data }) => {
   };
   const options = {
     indexAxis: "y",
+    backgroundColor: "red",
+    yAxis: {
+      scaleLabel: {
+        display: true,
+        labelString: "Hours",
+      },
+    },
+    scales: {
+      ticks: {
+        display: "auto",
+      },
+    },
     elements: {
       bar: {
         borderWidth: 1,
@@ -50,11 +62,17 @@ const WeekInfo = ({ data }) => {
     responsive: true,
     plugins: {
       legend: {
-        display: false,
+        position: "bottom",
+        labels: {
+          font: {
+            family: "Roboto",
+          },
+        },
       },
       title: {
         display: true,
-        text: "Work day distribution",
+        text: "Weekly day distribution",
+        fontFamily: "Roboto",
       },
     },
   };

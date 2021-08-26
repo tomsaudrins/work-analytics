@@ -30,9 +30,45 @@ const Location = ({ data }) => {
     ],
   };
 
+  const options = {
+    indexAxis: "y",
+    backgroundColor: "red",
+    yAxis: {
+      scaleLabel: {
+        display: true,
+        labelString: "Hours",
+      },
+    },
+    scales: {
+      ticks: {
+        display: "auto",
+      },
+    },
+    elements: {
+      bar: {
+        borderWidth: 1,
+      },
+    },
+    responsive: true,
+    plugins: {
+      legend: {
+        position: "bottom",
+        labels: {
+          font: {
+            family: "Roboto",
+          },
+        },
+      },
+      title: {
+        display: true,
+        text: "Weekly hour distribution",
+      },
+    },
+  };
+
   return (
     <div className="locationInfo">
-      <Doughnut data={dataSet} />
+      <Doughnut data={dataSet} options={options} />
     </div>
   );
 };
