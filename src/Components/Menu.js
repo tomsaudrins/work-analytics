@@ -1,18 +1,27 @@
 import "../css/Menu.css";
 import { FaChartBar } from "react-icons/fa";
-const Menu = ({ onClick, importedData, setData }) => {
+import { useState } from "react";
+import MenuItem from "./MenuItem";
+
+const Menu = ({ importedData, setData }) => {
+  const [active, setActive] = useState("Week");
+  const itemProps = {
+    active,
+    setData,
+    importedData,
+    setActive,
+  };
+
   return (
     <div className="sidebar">
-      <p style={{ height: "44px", fontSize: "28px", paddingTop: "25px", color: "white" }}>
+      <p className="logo">
         <FaChartBar />
       </p>
-      <a href="#main" className="active" onClick={() => setData(importedData.slice(0,7))}>Week</a>
-      <a href="#news" onClick={() => setData(importedData.slice(0,30))}>Month</a>
-      <a href="#contact" onClick={() => setData(importedData.slice(0,365))}>Year</a>
-      <a href="#contact" onClick={() => setData(importedData)}>Total</a>
-      <a href="#about" onClick={() => onClick(null)}>
-        Logout
-      </a>
+
+      <MenuItem {...itemProps} timeframe="7" text="Week" />
+      <MenuItem {...itemProps} timeframe="30" text="Month" />
+      <MenuItem {...itemProps} timeframe="365" text="Year" />
+      <MenuItem {...itemProps} timeframe="0" text="Logout" />
     </div>
   );
 };

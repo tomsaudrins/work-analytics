@@ -14,7 +14,7 @@
     display: none;
 }
 
-.sidebar a {
+.sidebar p {
     display: block;
     color: white;
     padding: 25px;
@@ -26,11 +26,7 @@
     margin-bottom: 80px;
 }
 
-.sidebar a.active {
-    background-color: #0f0e31;
-}
-
-.sidebar a:hover:not(.active) {
+.sidebar p.active {
     background-color: #0f0e31;
 }
 
@@ -53,4 +49,10 @@
         text-align: center;
         float: none;
     }
+}
+
+.sidebar .logo {
+    height: 44px;
+    font-size: 28px;
+    padding: 25px 25px 0px 25px;
 }

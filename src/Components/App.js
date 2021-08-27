@@ -14,27 +14,28 @@ const App = () => {
   defaults.font.family = "Poppins";
   defaults.font.size = 16;
   defaults.color = "#fff";
-  defaults.scales.radialLinear.ticks.display = false
-
+  defaults.scales.radialLinear.ticks.display = false;
 
   const [importedData, setImportedData] = useState(null);
   const [data, setData] = useState(null);
 
   const selectFile = () => {
     d3.csv("data.csv", (csvData) => {
-      setImportedData(csvData)
+      setImportedData(csvData);
     });
   };
 
   useEffect(() => {
-      setData(importedData ? importedData.slice(0,7): null);
-      console.log("Data is now")
-      console.log(data)
+    setData(importedData ? importedData.slice(0, 7) : null);
   }, [importedData]);
 
   return (
     <div className="App">
-      {data ? <Menu onClick={setData} importedData={importedData} setData={setData}/> : ""}
+      {data ? (
+        <Menu onClick={setData} importedData={importedData} setData={setData} />
+      ) : (
+        ""
+      )}
       <div className="content">
         <div style={{ display: "block", width: "100%", margin: "0 auto" }}>
           {data ? (

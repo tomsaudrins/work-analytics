@@ -9,7 +9,7 @@ const LastFiveDays = ({ data }) => {
       {lastFiveDays.map((day) => {
         return (
           <Day
-            key={day}
+            key={day["Date"]}
             day={day}
             Icon={day["Location"] === "Home" ? FaHome : FaBuilding}
           />
