@@ -27,19 +27,23 @@ const DayHours = ({ data }) => {
     datasets: [
       {
         data: Object.values(hourData),
+
         backgroundColor: [
           "rgba(255, 99, 132, 0.5)",
           "rgba(54, 162, 235, 0.5)",
           "rgba(255, 206, 86, 0.5)",
           "rgba(75, 192, 192, 0.5)",
           "rgba(153, 102, 255, 0.5)",
+          
         ],
+        
         borderWidth: 0,
       },
     ],
   };
 
   const options = {
+    
     maintainAspectRatio: false,
     indexAxis: "y",
     responsive: true,
@@ -50,7 +54,7 @@ const DayHours = ({ data }) => {
           font: {
             family: "Poppins",
             weight: "100",
-            color: "white",
+            color: "red",
           },
         },
       },

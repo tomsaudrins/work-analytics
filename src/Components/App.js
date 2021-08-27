@@ -10,10 +10,12 @@ import LastFiveDays from "./LastFiveDays";
 import { defaults } from "react-chartjs-2";
 
 const App = () => {
+  // move to other location later
   defaults.font.family = "Poppins";
   defaults.font.size = 16;
-  defaults.style = "100";
   defaults.color = "#fff";
+  defaults.scale.ticks.display = false
+  defaults.scale.ticks.backdropColor = "#27293d"
 
   const [data, setData] = useState(null);
 
