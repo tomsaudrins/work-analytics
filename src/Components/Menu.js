@@ -3,13 +3,13 @@ import "../css/Menu.css";
 const Menu = ({ onClick }) => {
   return (
     <div className="sidebar">
-      <a className="active" href="#home">
-        Data Analysis
-      </a>
-      <a href="#main">Location</a>
-      <a href="#news">Hours</a>
-      <a href="#contact">Salary</a>
-      <a href="#contact">Days</a>
+      <p style={{ height: "44px", fontSize: "16px", paddingTop: "25px" }}>
+        Data
+      </p>
+      <a href="#main">Week</a>
+      <a href="#news">Month</a>
+      <a href="#contact">Year</a>
+      <a href="#contact">Total</a>
       <a href="#about" onClick={() => onClick(null)}>
         Logout
       </a>
