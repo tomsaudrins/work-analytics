@@ -34,7 +34,7 @@ const DayHours = ({ data }) => {
           "rgba(75, 192, 192, 0.5)",
           "rgba(153, 102, 255, 0.5)",
         ],
-        borderWidth: 1,
+        borderWidth: 0,
       },
     ],
   };
