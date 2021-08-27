@@ -1,21 +1,11 @@
-import OptionCard from "./OptionCard";
-import Location from "../graphs/Location";
 import d3 from "d3";
+import "../scripts/configureGraphs.js";
 import { useState, useEffect } from "react";
-import WeekInfo from "../graphs/WeekInfo";
-import DayHours from "../graphs/DayHours";
 import Menu from "./Menu";
-import InfoCards from "./InfoCards";
-import LastFiveDays from "./LastFiveDays";
-import { defaults } from "react-chartjs-2";
+import Graphs from "./Graphs";
+import OptionCard from "./OptionCard";
 
 const App = () => {
-  // move to other location later
-  defaults.font.family = "Poppins";
-  defaults.font.size = 16;
-  defaults.color = "#fff";
-  defaults.scales.radialLinear.ticks.display = false;
-
   const [importedData, setImportedData] = useState(null);
   const [data, setData] = useState(null);
 
@@ -48,16 +38,7 @@ const App = () => {
             />
           )}
         </div>
-        <div className="graphs">
-          {data ? <InfoCards data={data} /> : ""}
-
-          <div className="row">
-            {data ? <Location data={data} /> : ""}
-            {data ? <DayHours data={data} /> : ""}
-            {data ? <WeekInfo data={data} /> : ""}
-          </div>
-          <div className="row">{data ? <LastFiveDays data={data} /> : ""}</div>
-        </div>
+        {data ? <Graphs data={data} /> : ""}
       </div>
     </div>
   );

@@ -22,10 +22,6 @@
     text-decoration: none;
 }
 
-.sidebar:first-child {
-    margin-bottom: 80px;
-}
-
 .sidebar p.active {
     background-color: #0f0e31;
 }
