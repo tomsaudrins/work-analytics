@@ -9,7 +9,6 @@ const calculateHours = (day) => {
 
 const DayHours = ({ data }) => {
   const hourData = {
-    // set sample values to zero in production
     Monday: 0,
     Tuesday: 0,
     Wednesday: 0,
@@ -34,9 +33,8 @@ const DayHours = ({ data }) => {
           "rgba(255, 206, 86, 0.5)",
           "rgba(75, 192, 192, 0.5)",
           "rgba(153, 102, 255, 0.5)",
-          
         ],
-        
+
         borderWidth: 0,
       },
     ],
@@ -44,16 +42,15 @@ const DayHours = ({ data }) => {
 
   const options = {
     scales: {
-        yAxes: {
+      yAxes: {
+        display: false,
+        ticks: {
+          color: "red",
           display: false,
-          ticks: {
-            color: "red",
-            display: false,
-            backdropColor: "#27293d",
-            z:1000,
-          }
+          backdropColor: "#27293d",
+          z: 1000,
         },
-        
+      },
     },
     maintainAspectRatio: false,
     indexAxis: "y",
@@ -70,8 +67,8 @@ const DayHours = ({ data }) => {
         },
       },
       title: {
-        display: false,
-        text: "Weekly hour distribution",
+        display: true,
+        text: "Hour distribution",
       },
     },
   };

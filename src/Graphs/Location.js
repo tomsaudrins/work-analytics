@@ -44,8 +44,8 @@ const Location = ({ data }) => {
         },
       },
       title: {
-        display: false,
-        text: "Weekly hour distribution",
+        display: true,
+        text: "Work location",
       },
     },
   };

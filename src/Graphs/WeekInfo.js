@@ -3,7 +3,6 @@ import { Bar } from "react-chartjs-2";
 import "../css/grid.css";
 const WeekInfo = ({ data }) => {
   const dayCount = {
-    // set sample values to zero in production
     Monday: 0,
     Tuesday: 0,
     Wednesday: 0,
@@ -13,7 +12,6 @@ const WeekInfo = ({ data }) => {
 
   data.forEach((date) => {
     let day = new Date(date["Date"].split("/").reverse()).getDay();
-    //console.log(day);
     dayCount[Object.keys(dayCount)[day - 1]]++;
   });
 
@@ -54,8 +52,8 @@ const WeekInfo = ({ data }) => {
         },
       },
       title: {
-        display: false,
-        text: "Weekly day distribution",
+        display: true,
+        text: "Day distribution",
         fontFamily: "Poppins",
         fontStyle: "italic",
       },
