@@ -11,3 +11,11 @@
     margin-top: 1%;
     border-radius: 0.2857rem;
 }
+
+@media screen and (max-width: 960px) {
+    .info-cards {
+        height: 121px;
+        background-color: #1e1e2f;
+        margin-bottom: 1%;
+    }
+}

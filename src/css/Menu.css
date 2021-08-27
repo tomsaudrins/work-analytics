@@ -28,11 +28,11 @@
 
 @media screen and (max-width: 700px) {
     .sidebar {
-        width: 100%;
+        width: 98%;
         height: auto;
         position: relative;
     }
-    .sidebar a {
+    .sidebar p {
         float: left;
     }
     div.content {
@@ -41,7 +41,7 @@
 }
 
 @media screen and (max-width: 400px) {
-    .sidebar a {
+    .sidebar p {
         text-align: center;
         float: none;
     }

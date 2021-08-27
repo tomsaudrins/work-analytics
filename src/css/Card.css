@@ -5,10 +5,49 @@
     height: auto;
     transition: 0.3s;
     padding: 0px 10px;
+}
+
+.name,
+.body {
     color: white;
 }
 
-.card-component h3,
-h4 {
-    color: white;
+.name {
+    font-size: 1.17em;
+}
+
+.body {
+    font-size: 1em;
+}
+
+@media screen and (max-width: 1358px) {
+    .name {
+        font-size: 1.1em;
+    }
+    .body {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .card-component {
+        width: 50%;
+        background-color: #28293d;
+        padding: 5px 0px;
+        margin-bottom: 1%;
+    }
+    .card-component:nth-child(odd) {
+        border-top-left-radius: 0.2857rem;
+        border-bottom-left-radius: 0.2857rem;
+    }
+    .card-component:nth-child(even) {
+        border-top-right-radius: 0.2857rem;
+        border-bottom-right-radius: 0.2857rem;
+    }
+    .name {
+        font-size: 1em;
+    }
+    .body {
+        font-size: 0.9em;
+    }
 }
