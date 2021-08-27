@@ -10,11 +10,11 @@ const calculateHours = (day) => {
 const DayHours = ({ data }) => {
   const hourData = {
     // set sample values to zero in production
-    Monday: 5,
-    Tuesday: 7,
-    Wednesday: 4,
-    Thursday: 5,
-    Friday: 8,
+    Monday: 0,
+    Tuesday: 0,
+    Wednesday: 0,
+    Thursday: 0,
+    Friday: 0,
   };
 
   data.forEach((date) => {

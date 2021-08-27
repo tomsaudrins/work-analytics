@@ -1,7 +1,7 @@
 import OptionCard from "./OptionCard";
 import Location from "../graphs/Location";
 import d3 from "d3";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import WeekInfo from "../graphs/WeekInfo";
 import DayHours from "../graphs/DayHours";
 import Menu from "./Menu";
@@ -17,18 +17,24 @@ const App = () => {
   defaults.scales.radialLinear.ticks.display = false
 
 
+  const [importedData, setImportedData] = useState(null);
   const [data, setData] = useState(null);
 
   const selectFile = () => {
     d3.csv("data.csv", (csvData) => {
-      setData(csvData);
-      console.log(data);
+      setImportedData(csvData)
     });
   };
 
+  useEffect(() => {
+      setData(importedData ? importedData.slice(0,7): null);
+      console.log("Data is now")
+      console.log(data)
+  }, [importedData]);
+
   return (
     <div className="App">
-      <Menu onClick={setData} />
+      {data ? <Menu onClick={setData} importedData={importedData} setData={setData}/> : ""}
       <div className="content">
         <div style={{ display: "block", width: "100%", margin: "0 auto" }}>
           {data ? (

@@ -4,11 +4,11 @@ import "../css/grid.css";
 const WeekInfo = ({ data }) => {
   const dayCount = {
     // set sample values to zero in production
-    Monday: 5,
-    Tuesday: 5,
-    Wednesday: 5,
-    Thursday: 5,
-    Friday: 5,
+    Monday: 0,
+    Tuesday: 0,
+    Wednesday: 0,
+    Thursday: 0,
+    Friday: 0,
   };
 
   data.forEach((date) => {
