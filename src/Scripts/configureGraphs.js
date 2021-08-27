@@ -5,3 +5,4 @@ defaults.font.size = 16;
 defaults.color = "#fff";
 defaults.scales.radialLinear.ticks.display = false;
 defaults.plugins.title.font.weight = "200";
+defaults.plugins.title.font.size = "18px";
