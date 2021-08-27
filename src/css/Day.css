@@ -18,3 +18,10 @@ p {
 .day:nth-child(even) {
     background-color: #232438;
 }
+
+.hours {
+    margin-left: 5px;
+    float: right;
+    font-size: 20px;
+    margin-top: 10px;
+}

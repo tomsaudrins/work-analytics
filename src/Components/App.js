@@ -21,7 +21,7 @@ const App = () => {
 
   const selectFile = () => {
     d3.csv("data.csv", (csvData) => {
-      setImportedData(csvData);
+      setImportedData(csvData.reverse());
     });
   };
 
