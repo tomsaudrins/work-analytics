@@ -14,8 +14,8 @@ const App = () => {
   defaults.font.family = "Poppins";
   defaults.font.size = 16;
   defaults.color = "#fff";
-  defaults.scale.ticks.display = false
-  defaults.scale.ticks.backdropColor = "#27293d"
+  defaults.scales.radialLinear.ticks.display = false
+
 
   const [data, setData] = useState(null);
 

@@ -43,7 +43,18 @@ const DayHours = ({ data }) => {
   };
 
   const options = {
-    
+    scales: {
+        yAxes: {
+          display: false,
+          ticks: {
+            color: "red",
+            display: false,
+            backdropColor: "#27293d",
+            z:1000,
+          }
+        },
+        
+    },
     maintainAspectRatio: false,
     indexAxis: "y",
     responsive: true,
