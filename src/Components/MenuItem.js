@@ -6,16 +6,15 @@ const MenuItem = ({
   timeframe,
   setActive,
 }) => {
+  const handleClick = (e) => {
+    setActive(e.target.innerText);
+    timeframe > 0 ? setData(importedData.slice(0, timeframe)) : setData(null);
+  };
+
+  const className = active === text ? "active" : "";
+
   return (
-    <p
-      className={`${active === text ? "active" : ""}`}
-      onClick={(e) => {
-        setActive(e.target.innerText);
-        timeframe > 0
-          ? setData(importedData.slice(0, timeframe))
-          : setData(null);
-      }}
-    >
+    <p className={className} onClick={(e) => handleClick(e)}>
       {text}
     </p>
   );
