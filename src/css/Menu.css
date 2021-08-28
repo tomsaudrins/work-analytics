@@ -57,6 +57,7 @@
 
 @media screen and (max-width: 470px) {
     .sidebar {
+        margin-top: 2%;
         display: flex;
     }
     .sidebar p {
