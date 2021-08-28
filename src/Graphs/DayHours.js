@@ -1,11 +1,8 @@
 import React from "react";
 import { PolarArea } from "react-chartjs-2";
 import "../css/grid.css";
-
-const calculateHours = (day) => {
-  let [hours, minutes] = day["Hours"].split(":");
-  return +hours + +minutes / 60;
-};
+import getDay from "../scripts/getDay";
+import countHours from "../scripts/countHours";
 
 const DayHours = ({ data }) => {
   const hourData = {
@@ -17,10 +14,8 @@ const DayHours = ({ data }) => {
   };
 
   data.forEach((date) => {
-    let day = new Date(
-      Date.parse(date["Date"].split("/").reverse().join("-") + "T10:00:00")
-    ).getDay();
-    hourData[Object.keys(hourData)[day - 1]] += calculateHours(date);
+    let day = getDay(date);
+    hourData[Object.keys(hourData)[day]] += countHours(date);
   });
 
   const dataSet = {

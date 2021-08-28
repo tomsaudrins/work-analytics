@@ -44,6 +44,8 @@ const App = () => {
     onClick: selectFile,
   };
 
+  console.log(importedData);
+
   return (
     <div className="App">
       {data ? (

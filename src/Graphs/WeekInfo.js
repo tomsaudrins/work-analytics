@@ -1,6 +1,8 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
 import "../css/grid.css";
+import getDay from "../scripts/getDay";
+
 const WeekInfo = ({ data }) => {
   const dayCount = {
     Monday: 0,
@@ -11,10 +13,8 @@ const WeekInfo = ({ data }) => {
   };
 
   data.forEach((date) => {
-    let day = new Date(
-      Date.parse(date["Date"].split("/").reverse().join("-") + "T10:00:00")
-    ).getDay();
-    dayCount[Object.keys(dayCount)[day - 1]]++;
+    let day = getDay(date);
+    dayCount[Object.keys(dayCount)[day]]++;
   });
 
   const dataSet = {
