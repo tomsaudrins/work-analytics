@@ -34,8 +34,9 @@
 
 @media screen and (max-width: 700px) {
     .sidebar {
+        max-height: 70px;
         width: 98%;
-        height: auto;
+        height: 70px;
         position: relative;
         text-align: center;
         display: flex;
