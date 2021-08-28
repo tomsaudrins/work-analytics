@@ -16,22 +16,22 @@
     }
     .info-grid-two:last-child {
         width: 100%;
-        margin-bottom: 1%;
+        margin-bottom: 2%;
     }
 }
 
 @media screen and (max-width: 700px) {
     .info-grid-one {
         width: 100%;
-        margin-bottom: 1%;
+        margin-bottom: 2%;
         margin-right: 0%;
     }
     .info-grid-two {
         width: 100%;
-        margin-bottom: 1%;
+        margin-bottom: 2%;
     }
     .info-grid-two:last-child {
         width: 100%;
-        margin-bottom: 1%;
+        margin-bottom: 2%;
     }
 }
