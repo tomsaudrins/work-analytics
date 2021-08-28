@@ -60,6 +60,9 @@ div.content {
     div.content {
         width: 100%;
     }
+    .App {
+        width: 98%;
+    }
 }
 
 
