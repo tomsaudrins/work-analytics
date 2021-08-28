@@ -3,6 +3,7 @@ import LastFiveDays from "./LastFiveDays";
 import Location from "../graphs/Location";
 import WeekInfo from "../graphs/WeekInfo";
 import DayHours from "../graphs/DayHours";
+import "../css/Graphs.css";
 
 const Graphs = ({ data }) => {
   return (

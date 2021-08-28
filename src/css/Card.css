@@ -34,7 +34,7 @@
         width: 50%;
         background-color: #28293d;
         padding: 5px 0px;
-        margin-bottom: 1%;
+        margin-bottom: 0%;
     }
     .card-component:nth-child(odd) {
         border-top-left-radius: 0.2857rem;
@@ -49,5 +49,8 @@
     }
     .body {
         font-size: 0.9em;
+    }
+    .card-component:nth-child(-n + 2) {
+        margin-bottom: 1%;
     }
 }
