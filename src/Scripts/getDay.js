@@ -9,7 +9,16 @@ const days = [
 ];
 
 const getDay = (date) => {
-  return days[new Date(date["Date"].split("/").reverse()).getDay() - 1];
+  console.log(
+    new Date(
+      Date.parse(date["Date"].split("/").reverse().join("-") + "T10:00:00")
+    )
+  );
+  return days[
+    new Date(
+      Date.parse(date["Date"].split("/").reverse().join("-") + "T10:00:00")
+    ).getDay() - 1
+  ];
 };
 
 export default getDay;

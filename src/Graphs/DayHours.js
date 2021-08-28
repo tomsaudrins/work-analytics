@@ -17,7 +17,9 @@ const DayHours = ({ data }) => {
   };
 
   data.forEach((date) => {
-    let day = new Date(date["Date"].split("/").reverse()).getDay();
+    let day = new Date(
+      Date.parse(date["Date"].split("/").reverse().join("-") + "T10:00:00")
+    ).getDay();
     hourData[Object.keys(hourData)[day - 1]] += calculateHours(date);
   });
 
