@@ -1,6 +1,6 @@
 import "../css/Login.css";
-import d3 from "d3";
-
+import data from "../scripts/sampleData";
+import selectFile from "../scripts/selectFile";
 const Login = ({
   distance,
   setDistance,
@@ -11,16 +11,6 @@ const Login = ({
   salary,
   setSalary,
 }) => {
-  const selectFile = (e) => {
-    e.preventDefault();
-    if (!distance || !currency || !salary)
-      return alert("Please fill in all the fields");
-
-    d3.csv("data.csv", (csvData) => {
-      setImportedData(csvData.reverse());
-    });
-  };
-
   return (
     <form>
       <h2 className="header-info">Data for calculations</h2>
@@ -62,10 +52,23 @@ const Login = ({
       </div>
 
       <div className="form-group">
-        <button onClick={(e) => selectFile(e)} type="submit">
+        <button
+          onClick={(e) =>
+            selectFile(e, distance, salary, currency, setImportedData)
+          }
+          type="submit"
+        >
           {importedData ? "File loaded!" : "Upload a file"}
         </button>
-        <button onClick={(e) => selectFile(e)} type="submit">
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            if (!distance || !currency || !salary)
+              return alert("Please fill in all the fields");
+            setImportedData(data);
+          }}
+          type="submit"
+        >
           Use sample data
         </button>
       </div>

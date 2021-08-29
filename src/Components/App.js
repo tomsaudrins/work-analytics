@@ -54,8 +54,6 @@ const App = () => {
     setSalary,
   };
 
-  console.log(importedData);
-
   return (
     <div className="App">
       {data && distance && salary && currency ? (
