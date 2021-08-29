@@ -8,10 +8,16 @@ const Dashboard = ({
   currency,
   distance,
   salary,
+  setImportedData,
 }) => {
   return (
     <>
-      <Menu onClick={setData} importedData={importedData} setData={setData} />
+      <Menu
+        onClick={setData}
+        setImportedData={setImportedData}
+        importedData={importedData}
+        setData={setData}
+      />
       <div className="content">
         {data ? (
           <Graphs

@@ -41,6 +41,7 @@ const App = () => {
     distance,
     salary,
     setSalary,
+    setImportedData,
   };
   const loginProps = {
     distance,

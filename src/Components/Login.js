@@ -57,14 +57,18 @@ const Login = ({
           <option>USD</option>
         </select>
       </div>
-      <div className="form-group">
-        <button onClick={(e) => selectFile(e)} type="submit">
-          {importedData ? "File loaded!" : "Upload a file"}
-        </button>
-        <button onClick={(e) => selectFile(e)} type="submit">
-          Use sample data
-        </button>
-      </div>
+      {currency && salary && distance ? (
+        <div className="form-group">
+          <button onClick={(e) => selectFile(e)} type="submit">
+            {importedData ? "File loaded!" : "Upload a file"}
+          </button>
+          <button onClick={(e) => selectFile(e)} type="submit">
+            Use sample data
+          </button>
+        </div>
+      ) : (
+        ""
+      )}
     </form>
   );
 };
