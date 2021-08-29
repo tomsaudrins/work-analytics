@@ -13,6 +13,9 @@ const Login = ({
 }) => {
   const selectFile = (e) => {
     e.preventDefault();
+    if (!distance || !currency || !salary)
+      return alert("Please fill in all the fields");
+
     d3.csv("data.csv", (csvData) => {
       setImportedData(csvData.reverse());
     });
