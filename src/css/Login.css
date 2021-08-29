@@ -1,0 +1,72 @@
+.card {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+}
+
+.card-header {
+    font-weight: normal;
+    margin: 40px auto;
+}
+
+.select-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 180px;
+}
+
+form {
+    background-color: #27293d;
+    padding: 50px 40px;
+    width: 86%;
+    max-width: 450px;
+    margin: 30px auto;
+}
+
+.form-group {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input,
+select,
+button {
+    -ms-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    background-color: #1e1e2f;
+    padding: 10px;
+    width: 60%;
+    border-radius: 0.2857rem;
+}
+
+input {
+    outline: none;
+}
+
+button {
+    width: 40%;
+    margin: 1%;
+}
+
+label {
+    margin: 0px 10px;
+    float: left;
+    width: 100px;
+    /* change this to whatever you want */
+    /* these make it look nicer */
+    text-align: right;
+    padding-top: 5px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}

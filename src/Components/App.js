@@ -1,19 +1,14 @@
-import d3 from "d3";
 import "../scripts/configureGraphs.js";
 import { useState, useEffect, useLayoutEffect } from "react";
-
-import OptionCard from "./OptionCard";
+import Login from "./Login";
 import Dashboard from "./Dashboard";
 
 const App = () => {
   const [importedData, setImportedData] = useState(null);
   const [data, setData] = useState(null);
-
-  const selectFile = () => {
-    d3.csv("data.csv", (csvData) => {
-      setImportedData(csvData.reverse());
-    });
-  };
+  const [currency, setCurrency] = useState("");
+  const [distance, setDistance] = useState("");
+  const [salary, setSalary] = useState("");
 
   useEffect(() => {
     setData(importedData ? importedData.slice(0, 7) : null);
@@ -38,20 +33,34 @@ const App = () => {
     return () => window.removeEventListener("resize", updateSize);
   }, [data]);
 
-  const dashboardProps = { data, setData, importedData };
-  const optionCardProps = {
-    text: "Upload..",
-    onClick: selectFile,
+  const dashboardProps = {
+    data,
+    setData,
+    importedData,
+    currency,
+    distance,
+    salary,
+    setSalary,
+  };
+  const loginProps = {
+    distance,
+    setDistance,
+    currency,
+    importedData,
+    setImportedData,
+    setCurrency,
+    salary,
+    setSalary,
   };
 
   console.log(importedData);
 
   return (
     <div className="App">
-      {data ? (
+      {data && distance && salary && currency ? (
         <Dashboard {...dashboardProps} />
       ) : (
-        <OptionCard {...optionCardProps} />
+        <Login {...loginProps} />
       )}
     </div>
   );

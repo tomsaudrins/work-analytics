@@ -5,17 +5,17 @@ import WeekInfo from "../graphs/WeekInfo";
 import DayHours from "../graphs/DayHours";
 import "../css/Graphs.css";
 
-const Graphs = ({ data }) => {
+const Graphs = (props) => {
   return (
     <div className="graphs">
-      <InfoCards data={data} />
+      <InfoCards {...props} />
       <div className="row">
-        <Location data={data} />
-        <DayHours data={data} />
-        <WeekInfo data={data} />
+        <Location data={props.data} />
+        <DayHours data={props.data} />
+        <WeekInfo data={props.data} />
       </div>
       <div className="row">
-        <LastFiveDays data={data} />
+        <LastFiveDays data={props.data} />
       </div>
     </div>
   );
