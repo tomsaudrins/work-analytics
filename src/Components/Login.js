@@ -20,7 +20,7 @@ const Login = ({
 
   return (
     <form>
-      <h2 className="header">Data for calculations</h2>
+      <h2 className="header-info">Data for calculations</h2>
       <div className="form-group">
         <label htmlFor="distance">Distance KM</label>
         <input
@@ -57,36 +57,31 @@ const Login = ({
           <option>USD</option>
         </select>
       </div>
-      {currency && salary && distance ? (
-        <>
-          <div className="form-group">
-            <button onClick={(e) => selectFile(e)} type="submit">
-              {importedData ? "File loaded!" : "Upload a file"}
-            </button>
-            <button onClick={(e) => selectFile(e)} type="submit">
-              Use sample data
-            </button>
-          </div>
-          <div>
-            <h4 className="header">Spreadsheet information</h4>
-            <p className="info">
-              The file has to be a CSV file that contains the following columns:
-              <span className="info-columns">
-                {" "}
-                Date, Start Time, End Time, Hours, Location.
-              </span>
-            </p>
-            <p className="info">
-              Date format: <span className="info-columns"> DD/MM/YYYY</span>
-              <br />
-              Start time, End time, and Hours:{" "}
-              <span className="info-columns"> HH.MM</span>
-            </p>
-          </div>
-        </>
-      ) : (
-        ""
-      )}
+
+      <div className="form-group">
+        <button onClick={(e) => selectFile(e)} type="submit">
+          {importedData ? "File loaded!" : "Upload a file"}
+        </button>
+        <button onClick={(e) => selectFile(e)} type="submit">
+          Use sample data
+        </button>
+      </div>
+      <div>
+        <h4 className="header">Spreadsheet information</h4>
+        <p className="info">
+          The file has to be a CSV file that contains the following columns:
+          <span className="info-columns">
+            {" "}
+            Date, Start Time, End Time, Hours, Location.
+          </span>
+        </p>
+        <p className="info">
+          Date format: <span className="info-columns"> DD/MM/YYYY</span>
+          <br />
+          Start time, End time, and Hours:{" "}
+          <span className="info-columns"> HH.MM</span>
+        </p>
+      </div>
     </form>
   );
 };
