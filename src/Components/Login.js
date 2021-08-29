@@ -20,7 +20,7 @@ const Login = ({
 
   return (
     <form>
-      <h2>Data for calculations</h2>
+      <h2 className="header">Data for calculations</h2>
       <div className="form-group">
         <label htmlFor="distance">Distance KM</label>
         <input
@@ -68,7 +68,7 @@ const Login = ({
             </button>
           </div>
           <div>
-            <h4>Spreadsheet information</h4>
+            <h4 className="header">Spreadsheet information</h4>
             <p className="info">
               The file has to be a CSV file that contains the following columns:
               <span className="info-columns">
@@ -79,7 +79,7 @@ const Login = ({
             <p className="info">
               Date format: <span className="info-columns"> DD/MM/YYYY</span>
               <br />
-              Start and end time format:{" "}
+              Start time, End time, and Hours:{" "}
               <span className="info-columns"> HH.MM</span>
             </p>
           </div>

@@ -67,12 +67,8 @@ label {
     padding-top: 5px;
 }
 
-h2,
-h4 {
+.header {
     margin-bottom: 20px;
-}
-
-h4 {
     width: 100%;
 }
 
