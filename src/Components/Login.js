@@ -58,14 +58,32 @@ const Login = ({
         </select>
       </div>
       {currency && salary && distance ? (
-        <div className="form-group">
-          <button onClick={(e) => selectFile(e)} type="submit">
-            {importedData ? "File loaded!" : "Upload a file"}
-          </button>
-          <button onClick={(e) => selectFile(e)} type="submit">
-            Use sample data
-          </button>
-        </div>
+        <>
+          <div className="form-group">
+            <button onClick={(e) => selectFile(e)} type="submit">
+              {importedData ? "File loaded!" : "Upload a file"}
+            </button>
+            <button onClick={(e) => selectFile(e)} type="submit">
+              Use sample data
+            </button>
+          </div>
+          <div>
+            <h4>Spreadsheet information</h4>
+            <p className="info">
+              The file has to be a CSV file that contains the following columns:
+              <span className="info-columns">
+                {" "}
+                Date, Start Time, End Time, Hours, Location.
+              </span>
+            </p>
+            <p className="info">
+              Date format: <span className="info-columns"> DD/MM/YYYY</span>
+              <br />
+              Start and end time format:{" "}
+              <span className="info-columns"> HH.MM</span>
+            </p>
+          </div>
+        </>
       ) : (
         ""
       )}

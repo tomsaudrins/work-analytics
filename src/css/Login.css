@@ -67,6 +67,22 @@ label {
     padding-top: 5px;
 }
 
-h2 {
+h2,
+h4 {
     margin-bottom: 20px;
+}
+
+h4 {
+    width: 100%;
+}
+
+.info {
+    color: #ffffff94;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.info-columns {
+    /* font-style: italic; */
+    color: #9b9be8;
 }
